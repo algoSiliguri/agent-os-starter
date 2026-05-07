@@ -10,9 +10,9 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 
 ## Prerequisites
 
-- [Pi](https://pi.ai) installed and on PATH
 - Node.js 20+
-- `curl` (for uv install)
+- Pi coding agent: `npm install -g @mariozechner/pi-coding-agent`
+- `curl` (for uv auto-install in setup.sh)
 - `ANTHROPIC_API_KEY` set in your shell
 
 ---
@@ -21,7 +21,7 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 
 ```bash
 # 1. Clone this repo or use it as a GitHub template
-git clone https://github.com/agnivadc/agent-os-starter my-project
+git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
 
 # 2. Run setup (checks deps, installs brain CLI, inits local DB)

@@ -39,7 +39,11 @@ BRAIN_GIT_URL="git+https://github.com/agnivadc/knowledge-brain.git@v1.0.0"
 echo ""
 echo "Installing brain CLI..."
 uv tool install --from "$BRAIN_GIT_URL" knowledge-brain --reinstall
-brain --db-path "$BRAIN_DB_PATH" init
+if [[ -f "$BRAIN_DB_PATH" ]]; then
+  echo "Brain DB already exists at $BRAIN_DB_PATH; skipping init."
+else
+  brain --db-path "$BRAIN_DB_PATH" init
+fi
 
 echo ""
 echo "=== Setup complete ==="
