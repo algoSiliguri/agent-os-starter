@@ -1,0 +1,32 @@
+# Brain DB — rebuilt from data_store/knowledge.jsonl
+data_store/*.db*
+
+# Agent OS runtime — per-machine state
+.agent-os/project.yaml
+.agent-os/runtime/
+.agent-os/tasks/
+.agent-os/schemas/
+.agent-os/contracts/
+AGENT_OS_CONSTITUTION.md
+
+# Pi / Claude Code per-machine config
+.mcp.json
+.claude/settings.local.json
+
+# Per-session brain capture buffer
+.brain-drafts/
+
+# Demo artifact (created by /run demo plan)
+hello.txt
+
+# Node
+node_modules/
+dist/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Env
+.env

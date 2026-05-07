@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "=== agent-os-starter setup ==="
+echo ""
+
+# Node 20+
+if ! node -e "process.exit(parseInt(process.versions.node) < 20 ? 1 : 0)" 2>/dev/null; then
+  echo "ERROR: Node 20+ required. Install from https://nodejs.org" >&2
+  exit 1
+fi
+echo "Node $(node -e 'process.stdout.write(process.versions.node)'): ok"
+
+# uv
+if ! command -v uv &>/dev/null; then
+  echo "Installing uv..."
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+echo "uv $(uv --version): ok"
+
+# API key
+if [[ -z "${ANTHROPIC_API_KEY:-}" ]]; then
+  echo ""
+  echo "ERROR: ANTHROPIC_API_KEY is not set." >&2
+  echo "  export ANTHROPIC_API_KEY=sk-ant-..." >&2
+  echo "  Then re-run: bash setup.sh" >&2
+  exit 1
+fi
+echo "ANTHROPIC_API_KEY: set"
+
+# Brain DB path
+REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export BRAIN_DB_PATH="${BRAIN_DB_PATH:-$REPO_ROOT/data_store/knowledge.db}"
+echo "BRAIN_DB_PATH: $BRAIN_DB_PATH"
+
+# Install brain CLI and init DB
+BRAIN_GIT_URL="git+https://github.com/agnivadc/knowledge-brain.git@v1.0.0"
+echo ""
+echo "Installing brain CLI..."
+uv tool install --from "$BRAIN_GIT_URL" knowledge-brain --reinstall
+brain --db-path "$BRAIN_DB_PATH" init
+
+echo ""
+echo "=== Setup complete ==="
+echo ""
+echo "Next steps:"
+echo "  1. pi install git:github.com/algoSiliguri/Agent_OS@v1.1.0"
+echo "  2. pi"
+echo "  3. /init my-project"
+echo "  4. /doctor"

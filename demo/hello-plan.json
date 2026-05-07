@@ -1,0 +1,22 @@
+{
+  "task_id": "T-001",
+  "goal": "Create a hello world file",
+  "steps": [
+    {
+      "step_id": "S-1",
+      "description": "Create hello.txt with a greeting",
+      "commands": [
+        { "command": "echo 'Hello from Agent OS' > hello.txt" }
+      ],
+      "expected_files": ["hello.txt"]
+    },
+    {
+      "step_id": "S-2",
+      "description": "Confirm working directory",
+      "commands": [
+        { "command": "pwd" }
+      ],
+      "expected_files": []
+    }
+  ]
+}
