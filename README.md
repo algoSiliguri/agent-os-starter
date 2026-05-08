@@ -11,9 +11,8 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 ## Prerequisites
 
 - Node.js 20+
-- Pi coding agent: `npm install -g @mariozechner/pi-coding-agent`
-- `curl` (for uv auto-install in setup.sh)
-- `ANTHROPIC_API_KEY` set in your shell
+- Pi coding agent v0.74.0+: `npm install -g @earendil-works/pi-coding-agent`
+- `ANTHROPIC_API_KEY` set in your shell (or any other model API key — see Pi docs)
 
 ---
 
@@ -24,22 +23,20 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
 
-# 2. Run setup (checks deps, installs brain CLI, inits local DB)
-bash setup.sh
+# 2. Install Agent OS extension into Pi (one time, global)
+pi install git:github.com/algoSiliguri/Agent_OS@v1.2.0
 
-# 3. Install Agent OS extension into Pi
-pi install git:github.com/algoSiliguri/Agent_OS@v1.1.0
-
-# 4. Open Pi in your project
+# 3. Open Pi in your project
 pi
 
-# 5. Initialize governance (press Enter to accept defaults)
-> /init my-project
+# 4. Initialize (run once per project — no arguments needed)
+> /init
 
-# 6. Verify — read-only, changes nothing
+# 5. Verify everything is working
 > /doctor
-> /status
 ```
+
+`/init` with no arguments uses your folder name as the project ID. It installs the brain CLI, creates the local knowledge DB, and sets up governance files. Re-running `/init` on an already-initialized project is safe.
 
 ---
 
@@ -78,17 +75,6 @@ git commit -m "save session memory"
 | `/plan` | writes local plan, asks for approval | yes |
 | `/run` | executes shell commands via Pi agent | yes, with demo plan |
 | `/remember` | writes to brain DB + exports jsonl | yes |
-
----
-
-## Brain DB
-
-Defaults to `./data_store/knowledge.db` (project-local).
-
-To share memory across projects:
-```bash
-export BRAIN_DB_PATH="$HOME/.knowledge-brain/knowledge.db"
-```
 
 ---
 
