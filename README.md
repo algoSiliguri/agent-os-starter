@@ -24,7 +24,7 @@ git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
 
 # 2. Install Agent OS extension into Pi (one time, global)
-pi install git:github.com/algoSiliguri/Agent_OS@v1.2.0
+pi install git:github.com/algoSiliguri/Agent_OS@v1.3.0
 
 # 3. Open Pi in your project
 pi
@@ -53,6 +53,18 @@ pi
 
 ---
 
+## Observe what happened
+
+After any command, run `/flight` to see a timeline of what happened:
+
+```
+> /flight
+```
+
+Shows state transitions, steps, brain memory operations, and a health summary. A `report.md` is written to `.agent-os/runtime/sessions/{session_id}/` after each call.
+
+---
+
 ## Persist memory
 
 ```
@@ -71,6 +83,7 @@ git commit -m "save session memory"
 |---------|-------------|-------------|
 | `/doctor` | none | yes |
 | `/status` | none | yes |
+| `/flight` | none | yes |
 | `/grill <idea>` | writes local grill record | yes |
 | `/plan` | writes local plan, asks for approval | yes |
 | `/run` | executes shell commands via Pi agent | yes, with demo plan |
