@@ -93,6 +93,9 @@ git commit -m "save session memory"
 | `/review` | writes review record | yes |
 | `/evaluate` | writes evaluation record | yes |
 | `/remember` | writes to brain DB + exports jsonl | yes |
+| `/flow <goal>` | runs full lifecycle grill→verify in one command | yes, pauses at each gate |
+| `/continue` | resumes task from current state | yes |
+| `/memory` | recovers pending memory candidates after interrupted /remember | yes |
 
 ---
 
