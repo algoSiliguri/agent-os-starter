@@ -24,7 +24,7 @@ git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
 
 # 2. Install Agent OS extension into Pi (one time, global)
-pi install git:github.com/algoSiliguri/Agent_OS@v1.3.0
+pi install git:github.com/algoSiliguri/Agent_OS@v1.4.0
 
 # 3. Open Pi in your project
 pi
@@ -85,8 +85,13 @@ git commit -m "save session memory"
 | `/status` | none | yes |
 | `/flight` | none | yes |
 | `/grill <idea>` | writes local grill record | yes |
+| `/diagnose` | writes diagnosis record | yes |
+| `/quick-task` | writes quick-task record | yes, with escalation prompt |
 | `/plan` | writes local plan, asks for approval | yes |
 | `/run` | executes shell commands via Pi agent | yes, with demo plan |
+| `/verify` | writes verification record | yes |
+| `/review` | writes review record | yes |
+| `/evaluate` | writes evaluation record | yes |
 | `/remember` | writes to brain DB + exports jsonl | yes |
 
 ---
