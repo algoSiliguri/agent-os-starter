@@ -23,8 +23,8 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
 
-# 2. Install Agent OS extension into Pi (one time, global)
-pi install git:github.com/algoSiliguri/Agent_OS@v1.4.0
+# 2. Bootstrap everything (installs brain CLI + Agent OS Pi extension)
+bash setup.sh
 
 # 3. Open Pi in your project
 pi
@@ -36,7 +36,7 @@ pi
 > /doctor
 ```
 
-`/init` with no arguments uses your folder name as the project ID. It installs the brain CLI, creates the local knowledge DB, and sets up governance files. Re-running `/init` on an already-initialized project is safe.
+`setup.sh` installs the `brain` CLI (via `uv`) and the Agent OS Pi extension. Re-running it is safe — it skips already-installed components. `/init` with no arguments uses your folder name as the project ID. Re-running `/init` on an already-initialized project is safe.
 
 ---
 
@@ -93,6 +93,9 @@ git commit -m "save session memory"
 | `/review` | writes review record | yes |
 | `/evaluate` | writes evaluation record | yes |
 | `/remember` | writes to brain DB + exports jsonl | yes |
+| `/flow <goal>` | runs full lifecycle grill→verify in one command | yes, pauses at each gate |
+| `/continue` | resumes task from current state | yes |
+| `/memory` | recovers pending memory candidates after interrupted /remember | yes |
 
 ---
 
