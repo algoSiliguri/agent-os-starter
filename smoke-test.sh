@@ -30,6 +30,8 @@ check "uv available" "command -v uv"
 check ".agent-os/ exists" "test -d .agent-os"
 check ".agent-os/contracts/index.json exists" "test -f .agent-os/contracts/index.json"
 check ".agent-os/install-manifest.json exists" "test -f .agent-os/install-manifest.json"
+check "install-manifest.json is valid JSON" "node -e \"JSON.parse(require('fs').readFileSync('.agent-os/install-manifest.json','utf-8'))\" 2>/dev/null || python3 -c \"import json,sys; json.load(open('.agent-os/install-manifest.json'))\""
+check "install-manifest.json has required fields" "node -e \"const m=JSON.parse(require('fs').readFileSync('.agent-os/install-manifest.json','utf-8')); ['installed_at','knowledge_brain_version','agent_os_extension','brain_db_path'].forEach(k=>{if(!m[k])throw new Error(k)})\" 2>/dev/null"
 check "data_store/ exists" "test -d data_store"
 
 # Brain DB
