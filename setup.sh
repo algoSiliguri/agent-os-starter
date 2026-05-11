@@ -45,11 +45,39 @@ else
   brain --db-path "$BRAIN_DB_PATH" init
 fi
 
+
+# Install Agent OS Pi extension
+AGENT_OS_EXTENSION="git:github.com/algoSiliguri/Agent_OS@v1.4.0"
+echo ""
+echo "Installing Agent OS Pi extension..."
+if command -v pi &>/dev/null; then
+  pi install "$AGENT_OS_EXTENSION"
+  echo "Agent OS extension installed: ok"
+else
+  echo "WARNING: 'pi' not found. Install it first:"
+  echo "  npm install -g @earendil-works/pi-coding-agent"
+  echo "Then run: pi install $AGENT_OS_EXTENSION"
+fi
+
+# Write install manifest (used by doctor and upgrade)
+MANIFEST_PATH="$REPO_ROOT/.agent-os/install-manifest.json"
+mkdir -p "$(dirname "$MANIFEST_PATH")"
+cat > "$MANIFEST_PATH" <<EOF
+{
+  "installed_at": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+  "knowledge_brain_version": "v1.0.0",
+  "agent_os_extension": "$AGENT_OS_EXTENSION",
+  "brain_db_path": "$BRAIN_DB_PATH",
+  "node_version": "$(node -e 'process.stdout.write(process.versions.node)')",
+  "uv_version": "$(uv --version 2>&1 | head -1)"
+}
+EOF
+echo "Install manifest: $MANIFEST_PATH"
+
 echo ""
 echo "=== Setup complete ==="
 echo ""
 echo "Next steps:"
-echo "  1. pi install git:github.com/algoSiliguri/Agent_OS@v1.4.0"
-echo "  2. pi"
-echo "  3. /init my-project"
-echo "  4. /doctor"
+echo "  1. Open Pi in this directory: pi"
+echo "  2. Run /init"
+echo "  3. Run /doctor"
