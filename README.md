@@ -19,6 +19,9 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 ## Start
 
 ```bash
+# 0. Install Pi (once per machine)
+npm install -g @earendil-works/pi-coding-agent
+
 # 1. Clone this repo or use it as a GitHub template
 git clone https://github.com/algoSiliguri/agent-os-starter my-project
 cd my-project
@@ -34,22 +37,39 @@ pi
 
 # 5. Verify everything is working
 > /doctor
+
+# 6. Start your first task
+> /flow "create a hello world file"
 ```
 
-`setup.sh` installs the `brain` CLI (via `uv`) and the Agent OS Pi extension. Re-running it is safe — it skips already-installed components. `/init` with no arguments uses your folder name as the project ID. Re-running `/init` on an already-initialized project is safe.
+`setup.sh` installs the `brain` CLI (via `uv`) and the Agent OS Pi extension. It requires `pi` to already be installed — it will fail with install instructions if not. Re-running it is safe — it skips already-installed components. `/init` with no arguments uses your folder name as the project ID. Re-running `/init` on an already-initialized project is safe.
 
 ---
 
-## Safe demo (run this first)
+## Primary workflow
+
+`/flow` is the main entry point. It runs the full lifecycle (grill → plan → run → verify → review → evaluate) with guided prompts and approval gates at each step.
+
+```
+> /flow "add dark mode toggle to settings page"
+```
+
+`/flow` pauses at every gate. You answer questions, approve the plan, confirm execution, and review results. Use `/continue` to resume if the session is interrupted.
+
+> **Warning:** `/run` (triggered by `/flow`) executes real shell commands inside your project directory.
+> Review the plan before confirming at the approval gate.
+
+---
+
+## Power user — step by step
+
+Run phases individually if you need direct control:
 
 ```
 > /grill "create a hello world file"
 > /plan
 > /run
 ```
-
-> **Warning:** `/run` executes real shell commands inside your project directory.
-> The included demo plan only creates `hello.txt` and runs `pwd`. Review the plan before confirming.
 
 ---
 
