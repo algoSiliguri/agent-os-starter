@@ -50,4 +50,4 @@ if [[ $FAIL -gt 0 ]]; then
   echo "Run 'bash setup.sh' to fix failures."
   exit 1
 fi
-echo "All checks passed. Run 'pi' then '/init' to start."
+echo "All checks passed. Run 'pi', then '/init', '/doctor', and '/flow \"<goal>\"' to start."
