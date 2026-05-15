@@ -194,7 +194,7 @@ install_state_check_brain_list() {
 }
 
 install_state_check_agent_os_extension_registered() {
-  pi list 2>/dev/null | grep -Eiq 'Agent_OS|@agnivadc/agent-os|algoSiliguri/Agent_OS'
+  pi list 2>/dev/null | grep -Fq "$(install_state_agent_os_source)"
 }
 
 install_state_pi_list() {
@@ -202,8 +202,10 @@ install_state_pi_list() {
 }
 
 install_state_agent_os_resolved_path() {
-  install_state_pi_list | awk '
-    /Agent_OS|@agnivadc\/agent-os|algoSiliguri\/Agent_OS/ { found=1; next }
+  local source
+  source="$(install_state_agent_os_source)"
+  install_state_pi_list | awk -v source="$source" '
+    index($0, source) { found=1; next }
     found && /^[[:space:]]+\// { gsub(/^[[:space:]]+/, "", $0); print; exit }
   '
 }
