@@ -47,7 +47,7 @@ pi
 
 `setup.sh` installs the `brain` CLI (via `uv`) and the Agent OS Pi extension. It requires `pi` to already be installed — it will fail with install instructions if not. Re-running it is safe — it skips already-installed components. `/init` with no arguments uses your folder name as the project ID. Re-running `/init` on an already-initialized project is safe.
 
-Install and update targets are defined in `agent-os-install.env`. The current release config installs Agent OS from the immutable `v1.6.0` tag.
+Install and update targets are defined in `agent-os-install.env`. The current release config installs Agent OS from the immutable `v1.6.1` tag.
 
 Lifecycle commands:
 

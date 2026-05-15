@@ -18,7 +18,7 @@ install_state_config_path() {
 }
 
 install_state_agent_os_source() {
-  printf '%s\n' "${AGENT_OS_EXTENSION:-${AGENT_OS_INSTALL_REF:-git:github.com/algoSiliguri/Agent_OS@v1.6.0}}"
+  printf '%s\n' "${AGENT_OS_EXTENSION:-${AGENT_OS_INSTALL_REF:-git:github.com/algoSiliguri/Agent_OS@v1.6.1}}"
 }
 
 install_state_agent_os_expected_version() {
@@ -30,7 +30,7 @@ install_state_agent_os_channel() {
 }
 
 install_state_knowledge_brain_source() {
-  printf '%s\n' "${KNOWLEDGE_BRAIN_SOURCE:-${KNOWLEDGE_BRAIN_INSTALL_REF:-git+https://github.com/agnivadc/knowledge-brain.git@v1.0.0}}"
+  printf '%s\n' "${KNOWLEDGE_BRAIN_SOURCE:-${KNOWLEDGE_BRAIN_INSTALL_REF:-git+https://github.com/agnivadc/knowledge-brain.git@v1.0.1}}"
 }
 
 install_state_knowledge_brain_expected_version() {

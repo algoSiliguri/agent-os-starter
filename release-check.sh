@@ -22,6 +22,12 @@ toml_project_version() {
   sed -n 's/^version[[:space:]]*=[[:space:]]*"\([^"]*\)".*/\1/p' "$1" | head -1
 }
 
+remote_tag_exists() {
+  local repo="$1"
+  local tag="$2"
+  git -C "$repo" ls-remote --tags origin "$tag" 2>/dev/null | grep -q "refs/tags/$tag$"
+}
+
 contains_stale_ref() {
   local stale_pattern="Agent_OS@v1\\."4"\\.0"
   grep -R "$stale_pattern" "$REPO_ROOT/setup.sh" "$REPO_ROOT/update.sh" "$REPO_ROOT/uninstall.sh" "$REPO_ROOT/doctor.sh" "$REPO_ROOT/smoke-user-install.sh" "$REPO_ROOT/lib/install-state.sh" >/dev/null 2>&1
@@ -64,6 +70,12 @@ if [[ -f "$AGENT_OS_ADJACENT/package.json" ]]; then
     AGENT_TAG_EXISTS=0
     warn "local Agent_OS tag v$(install_state_agent_os_expected_version) is missing"
   fi
+  if remote_tag_exists "$AGENT_OS_ADJACENT" "v$(install_state_agent_os_expected_version)"; then
+    pass "remote Agent_OS tag v$(install_state_agent_os_expected_version) exists"
+  else
+    fail "remote Agent_OS tag v$(install_state_agent_os_expected_version) is missing"
+    echo "       Release action: git -C \"$AGENT_OS_ADJACENT\" push origin v$(install_state_agent_os_expected_version)"
+  fi
 else
   AGENT_TAG_EXISTS=unknown
   warn "adjacent Agent_OS repo not found; skipped local version check"
@@ -76,6 +88,17 @@ if [[ -f "$KB_ADJACENT/pyproject.toml" ]]; then
     pass "knowledge-brain expected version matches adjacent pyproject.toml"
   else
     fail "knowledge-brain expected version does not match adjacent pyproject.toml"
+  fi
+  if git -C "$KB_ADJACENT" tag --list "v$(install_state_knowledge_brain_expected_version)" | grep -q .; then
+    pass "local knowledge-brain tag v$(install_state_knowledge_brain_expected_version) exists"
+  else
+    fail "local knowledge-brain tag v$(install_state_knowledge_brain_expected_version) is missing"
+  fi
+  if remote_tag_exists "$KB_ADJACENT" "v$(install_state_knowledge_brain_expected_version)"; then
+    pass "remote knowledge-brain tag v$(install_state_knowledge_brain_expected_version) exists"
+  else
+    fail "remote knowledge-brain tag v$(install_state_knowledge_brain_expected_version) is missing"
+    echo "       Release action: git -C \"$KB_ADJACENT\" push origin v$(install_state_knowledge_brain_expected_version)"
   fi
 else
   warn "adjacent knowledge-brain repo not found; skipped local version check"
