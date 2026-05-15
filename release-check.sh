@@ -139,6 +139,24 @@ else
   pass "no stale Agent_OS v1.4.0 refs in lifecycle scripts"
 fi
 
+if grep -n "ANTHROPIC_API_KEY" \
+    "$REPO_ROOT/setup.sh" \
+    "$REPO_ROOT/doctor.sh" \
+    "$REPO_ROOT/update.sh" \
+    "$REPO_ROOT/uninstall.sh" \
+    "$REPO_ROOT/smoke-user-install.sh" \
+    2>/dev/null; then
+  fail "active lifecycle scripts must not reference ANTHROPIC_API_KEY; use Pi /login provider-neutral flow"
+else
+  pass "no ANTHROPIC_API_KEY references in active lifecycle scripts"
+fi
+
+if grep -i "required" "$REPO_ROOT/.env.example" 2>/dev/null | grep -i "ANTHROPIC_API_KEY"; then
+  fail ".env.example must not mark ANTHROPIC_API_KEY as required"
+else
+  pass ".env.example does not mark ANTHROPIC_API_KEY as required"
+fi
+
 if grep -q "source \"\$REPO_ROOT/lib/install-state.sh\"" "$REPO_ROOT/setup.sh" "$REPO_ROOT/update.sh" "$REPO_ROOT/uninstall.sh" "$REPO_ROOT/doctor.sh" >/dev/null 2>&1 && grep -q "agent-os-install.env" "$REPO_ROOT/lib/install-state.sh"; then
   pass "lifecycle scripts load install-state, which sources shared config"
 else

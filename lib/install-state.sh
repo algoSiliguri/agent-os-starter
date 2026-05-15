@@ -117,10 +117,6 @@ install_state_starter_commit() {
   git -C "$repo_root" rev-parse --short HEAD 2>/dev/null || printf '%s\n' "unknown"
 }
 
-install_state_check_api_key() {
-  [[ -n "${ANTHROPIC_API_KEY:-}" ]]
-}
-
 install_state_manifest_path() {
   local repo_root
   repo_root="$(install_state_repo_root)"

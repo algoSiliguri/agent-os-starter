@@ -75,20 +75,6 @@ if install_state_check_uv; then
   echo "uv $(uv --version): ok"
 fi
 
-# API key
-if [[ "$DRY_RUN" -eq 0 ]] && ! install_state_check_api_key; then
-  echo ""
-  echo "ERROR: ANTHROPIC_API_KEY is not set." >&2
-  echo "  export ANTHROPIC_API_KEY=sk-ant-..." >&2
-  echo "  Then re-run: bash setup.sh" >&2
-  exit 1
-fi
-if [[ "$DRY_RUN" -eq 1 ]]; then
-  echo "ANTHROPIC_API_KEY: not required for dry run"
-else
-  echo "ANTHROPIC_API_KEY: set"
-fi
-
 # Brain DB path
 export BRAIN_DB_PATH="$(install_state_brain_db_path)"
 echo "BRAIN_DB_PATH: $BRAIN_DB_PATH"
@@ -160,7 +146,8 @@ echo ""
 echo "=== Setup complete ==="
 echo ""
 echo "Next steps:"
-echo "  1. Open Pi in this directory: pi"
-echo "  2. Run /init"
-echo "  3. Run /doctor"
-echo "  4. Start a task: /flow \"<your goal>\""
+echo "  1. Configure your model provider: run \`pi\`, then \`/login\`, then choose your provider."
+echo "  2. Open Pi in this directory: pi"
+echo "  3. Run /init"
+echo "  4. Run /doctor"
+echo "  5. Start a task: /flow \"<your goal>\""

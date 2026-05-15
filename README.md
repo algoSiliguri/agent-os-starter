@@ -12,7 +12,7 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 
 - Node.js 20+
 - Pi coding agent v0.74.0+: `npm install -g @earendil-works/pi-coding-agent`
-- `ANTHROPIC_API_KEY` set in your shell (or any other model API key — see Pi docs)
+- Provider auth configured: run `pi`, then `/login`, then choose your provider
 
 ---
 
