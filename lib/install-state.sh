@@ -137,12 +137,6 @@ install_state_check_agent_os_dir() {
   [[ -d "$repo_root/.agent-os" ]]
 }
 
-install_state_check_contract_index() {
-  local repo_root
-  repo_root="$(install_state_repo_root)"
-  [[ -f "$repo_root/.agent-os/contracts/index.json" ]]
-}
-
 install_state_check_manifest_exists() {
   [[ -f "$(install_state_manifest_path)" ]]
 }
@@ -171,12 +165,6 @@ install_state_check_manifest_schema() {
   local actual
   actual="$(install_state_manifest_field schema_version 2>/dev/null || true)"
   [[ "$actual" == "$(install_state_manifest_schema_version)" ]]
-}
-
-install_state_check_data_store_dir() {
-  local repo_root
-  repo_root="$(install_state_repo_root)"
-  [[ -d "$repo_root/data_store" ]]
 }
 
 install_state_check_brain_db() {
