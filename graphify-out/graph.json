@@ -1,0 +1,2427 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "flow_lifecycle_phases",
+        "label": "Flow lifecycle phases",
+        "nodes": [
+          "readme_grill_command",
+          "readme_plan_command",
+          "readme_run_command",
+          "readme_verify_command",
+          "readme_review_command",
+          "readme_evaluate_command"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      },
+      {
+        "id": "install_lifecycle_scripts",
+        "label": "Install lifecycle scripts",
+        "nodes": [
+          "readme_setup_sh",
+          "readme_doctor_sh",
+          "readme_update_sh",
+          "readme_uninstall_sh"
+        ],
+        "relation": "form",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      },
+      {
+        "id": "memory_persistence_flow",
+        "label": "Memory persistence flow",
+        "nodes": [
+          "readme_remember_command",
+          "readme_knowledge_db",
+          "readme_knowledge_jsonl",
+          "readme_memory_command"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 1.0,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "doctor.sh",
+      "file_type": "code",
+      "source_file": "doctor.sh",
+      "source_location": "L1",
+      "id": "doctor_sh",
+      "community": 8,
+      "norm_label": "doctor.sh"
+    },
+    {
+      "label": "pass()",
+      "file_type": "code",
+      "source_file": "doctor.sh",
+      "source_location": "L27",
+      "id": "agent_os_starter_doctor_pass",
+      "community": 8,
+      "norm_label": "pass()"
+    },
+    {
+      "label": "warn()",
+      "file_type": "code",
+      "source_file": "doctor.sh",
+      "source_location": "L28",
+      "id": "agent_os_starter_doctor_warn",
+      "community": 8,
+      "norm_label": "warn()"
+    },
+    {
+      "label": "fail()",
+      "file_type": "code",
+      "source_file": "doctor.sh",
+      "source_location": "L29",
+      "id": "agent_os_starter_doctor_fail",
+      "community": 8,
+      "norm_label": "fail()"
+    },
+    {
+      "label": "release-check.sh",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L1",
+      "id": "release_check_sh",
+      "community": 5,
+      "norm_label": "release-check.sh"
+    },
+    {
+      "label": "pass()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L13",
+      "id": "agent_os_starter_release_check_pass",
+      "community": 5,
+      "norm_label": "pass()"
+    },
+    {
+      "label": "warn()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L14",
+      "id": "agent_os_starter_release_check_warn",
+      "community": 5,
+      "norm_label": "warn()"
+    },
+    {
+      "label": "fail()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L15",
+      "id": "agent_os_starter_release_check_fail",
+      "community": 5,
+      "norm_label": "fail()"
+    },
+    {
+      "label": "json_version()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L17",
+      "id": "agent_os_starter_release_check_json_version",
+      "community": 5,
+      "norm_label": "json_version()"
+    },
+    {
+      "label": "toml_project_version()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L21",
+      "id": "agent_os_starter_release_check_toml_project_version",
+      "community": 5,
+      "norm_label": "toml_project_version()"
+    },
+    {
+      "label": "remote_tag_exists()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L25",
+      "id": "agent_os_starter_release_check_remote_tag_exists",
+      "community": 5,
+      "norm_label": "remote_tag_exists()"
+    },
+    {
+      "label": "contains_stale_ref()",
+      "file_type": "code",
+      "source_file": "release-check.sh",
+      "source_location": "L31",
+      "id": "agent_os_starter_release_check_contains_stale_ref",
+      "community": 5,
+      "norm_label": "contains_stale_ref()"
+    },
+    {
+      "label": "setup.sh",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L1",
+      "id": "setup_sh",
+      "community": 14,
+      "norm_label": "setup.sh"
+    },
+    {
+      "label": "BRAIN_DB_PATH",
+      "file_type": "code",
+      "source_file": "setup.sh",
+      "source_location": "L79",
+      "id": "agent_os_starter_setup_brain_db_path",
+      "community": 14,
+      "norm_label": "brain_db_path"
+    },
+    {
+      "label": "smoke-user-install.sh",
+      "file_type": "code",
+      "source_file": "smoke-user-install.sh",
+      "source_location": "L1",
+      "id": "smoke_user_install_sh",
+      "community": 13,
+      "norm_label": "smoke-user-install.sh"
+    },
+    {
+      "label": "run_step()",
+      "file_type": "code",
+      "source_file": "smoke-user-install.sh",
+      "source_location": "L45",
+      "id": "agent_os_starter_smoke_user_install_run_step",
+      "community": 13,
+      "norm_label": "run_step()"
+    },
+    {
+      "label": "uninstall.sh",
+      "file_type": "code",
+      "source_file": "uninstall.sh",
+      "source_location": "L1",
+      "id": "uninstall_sh",
+      "community": 15,
+      "norm_label": "uninstall.sh"
+    },
+    {
+      "label": "update.sh",
+      "file_type": "code",
+      "source_file": "update.sh",
+      "source_location": "L1",
+      "id": "update_sh",
+      "community": 16,
+      "norm_label": "update.sh"
+    },
+    {
+      "label": "settings.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L1",
+      "id": "claude_settings_json",
+      "community": 10,
+      "norm_label": "settings.json"
+    },
+    {
+      "label": "hooks",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "id": "claude_settings_hooks",
+      "community": 10,
+      "norm_label": "hooks"
+    },
+    {
+      "label": "PreToolUse",
+      "file_type": "code",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "id": "claude_settings_hooks_pretooluse",
+      "community": 10,
+      "norm_label": "pretooluse"
+    },
+    {
+      "label": "settings.local.json",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L1",
+      "id": "claude_settings_local_json",
+      "community": 11,
+      "norm_label": "settings.local.json"
+    },
+    {
+      "label": "permissions",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "id": "claude_settings_local_permissions",
+      "community": 11,
+      "norm_label": "permissions"
+    },
+    {
+      "label": "allow",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "id": "claude_settings_local_permissions_allow",
+      "community": 11,
+      "norm_label": "allow"
+    },
+    {
+      "label": "install-state.sh",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L1",
+      "id": "lib_install_state_sh",
+      "community": 1,
+      "norm_label": "install-state.sh"
+    },
+    {
+      "label": "install_state_repo_root()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L12",
+      "id": "lib_install_state_install_state_repo_root",
+      "community": 6,
+      "norm_label": "install_state_repo_root()"
+    },
+    {
+      "label": "install_state_config_path()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L16",
+      "id": "lib_install_state_install_state_config_path",
+      "community": 1,
+      "norm_label": "install_state_config_path()"
+    },
+    {
+      "label": "install_state_agent_os_source()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L20",
+      "id": "lib_install_state_install_state_agent_os_source",
+      "community": 1,
+      "norm_label": "install_state_agent_os_source()"
+    },
+    {
+      "label": "install_state_agent_os_expected_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L24",
+      "id": "lib_install_state_install_state_agent_os_expected_version",
+      "community": 2,
+      "norm_label": "install_state_agent_os_expected_version()"
+    },
+    {
+      "label": "install_state_agent_os_channel()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L28",
+      "id": "lib_install_state_install_state_agent_os_channel",
+      "community": 2,
+      "norm_label": "install_state_agent_os_channel()"
+    },
+    {
+      "label": "install_state_knowledge_brain_source()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L32",
+      "id": "lib_install_state_install_state_knowledge_brain_source",
+      "community": 2,
+      "norm_label": "install_state_knowledge_brain_source()"
+    },
+    {
+      "label": "install_state_knowledge_brain_expected_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L36",
+      "id": "lib_install_state_install_state_knowledge_brain_expected_version",
+      "community": 2,
+      "norm_label": "install_state_knowledge_brain_expected_version()"
+    },
+    {
+      "label": "install_state_min_pi_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L40",
+      "id": "lib_install_state_install_state_min_pi_version",
+      "community": 12,
+      "norm_label": "install_state_min_pi_version()"
+    },
+    {
+      "label": "install_state_manifest_schema_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L44",
+      "id": "lib_install_state_install_state_manifest_schema_version",
+      "community": 3,
+      "norm_label": "install_state_manifest_schema_version()"
+    },
+    {
+      "label": "install_state_pi_agent_dir()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L48",
+      "id": "lib_install_state_install_state_pi_agent_dir",
+      "community": 2,
+      "norm_label": "install_state_pi_agent_dir()"
+    },
+    {
+      "label": "install_state_brain_db_path()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L52",
+      "id": "lib_install_state_install_state_brain_db_path",
+      "community": 6,
+      "norm_label": "install_state_brain_db_path()"
+    },
+    {
+      "label": "install_state_node_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L58",
+      "id": "lib_install_state_install_state_node_version",
+      "community": 2,
+      "norm_label": "install_state_node_version()"
+    },
+    {
+      "label": "install_state_check_node()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L62",
+      "id": "lib_install_state_install_state_check_node",
+      "community": 1,
+      "norm_label": "install_state_check_node()"
+    },
+    {
+      "label": "install_state_check_pi_cli()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L66",
+      "id": "lib_install_state_install_state_check_pi_cli",
+      "community": 1,
+      "norm_label": "install_state_check_pi_cli()"
+    },
+    {
+      "label": "install_state_pi_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L70",
+      "id": "lib_install_state_install_state_pi_version",
+      "community": 12,
+      "norm_label": "install_state_pi_version()"
+    },
+    {
+      "label": "install_state_check_pi_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L74",
+      "id": "lib_install_state_install_state_check_pi_version",
+      "community": 12,
+      "norm_label": "install_state_check_pi_version()"
+    },
+    {
+      "label": "install_state_check_uv()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L83",
+      "id": "lib_install_state_install_state_check_uv",
+      "community": 1,
+      "norm_label": "install_state_check_uv()"
+    },
+    {
+      "label": "install_state_check_brain_cli()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L87",
+      "id": "lib_install_state_install_state_check_brain_cli",
+      "community": 1,
+      "norm_label": "install_state_check_brain_cli()"
+    },
+    {
+      "label": "install_state_brain_path()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L91",
+      "id": "lib_install_state_install_state_brain_path",
+      "community": 2,
+      "norm_label": "install_state_brain_path()"
+    },
+    {
+      "label": "install_state_brain_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L95",
+      "id": "lib_install_state_install_state_brain_version",
+      "community": 1,
+      "norm_label": "install_state_brain_version()"
+    },
+    {
+      "label": "install_state_agent_os_version_from_source()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L99",
+      "id": "lib_install_state_install_state_agent_os_version_from_source",
+      "community": 2,
+      "norm_label": "install_state_agent_os_version_from_source()"
+    },
+    {
+      "label": "install_state_starter_commit()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L114",
+      "id": "lib_install_state_install_state_starter_commit",
+      "community": 6,
+      "norm_label": "install_state_starter_commit()"
+    },
+    {
+      "label": "install_state_manifest_path()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L120",
+      "id": "lib_install_state_install_state_manifest_path",
+      "community": 3,
+      "norm_label": "install_state_manifest_path()"
+    },
+    {
+      "label": "install_state_manifest_field()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L126",
+      "id": "lib_install_state_install_state_manifest_field",
+      "community": 3,
+      "norm_label": "install_state_manifest_field()"
+    },
+    {
+      "label": "install_state_check_agent_os_dir()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L134",
+      "id": "lib_install_state_install_state_check_agent_os_dir",
+      "community": 6,
+      "norm_label": "install_state_check_agent_os_dir()"
+    },
+    {
+      "label": "install_state_check_manifest_exists()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L140",
+      "id": "lib_install_state_install_state_check_manifest_exists",
+      "community": 3,
+      "norm_label": "install_state_check_manifest_exists()"
+    },
+    {
+      "label": "install_state_check_manifest_json()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L144",
+      "id": "lib_install_state_install_state_check_manifest_json",
+      "community": 3,
+      "norm_label": "install_state_check_manifest_json()"
+    },
+    {
+      "label": "install_state_check_manifest_fields()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L154",
+      "id": "lib_install_state_install_state_check_manifest_fields",
+      "community": 3,
+      "norm_label": "install_state_check_manifest_fields()"
+    },
+    {
+      "label": "install_state_check_manifest_schema()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L164",
+      "id": "lib_install_state_install_state_check_manifest_schema",
+      "community": 3,
+      "norm_label": "install_state_check_manifest_schema()"
+    },
+    {
+      "label": "install_state_check_brain_db()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L170",
+      "id": "lib_install_state_install_state_check_brain_db",
+      "community": 6,
+      "norm_label": "install_state_check_brain_db()"
+    },
+    {
+      "label": "install_state_check_brain_list()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L174",
+      "id": "lib_install_state_install_state_check_brain_list",
+      "community": 6,
+      "norm_label": "install_state_check_brain_list()"
+    },
+    {
+      "label": "install_state_check_agent_os_extension_registered()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L180",
+      "id": "lib_install_state_install_state_check_agent_os_extension_registered",
+      "community": 1,
+      "norm_label": "install_state_check_agent_os_extension_registered()"
+    },
+    {
+      "label": "install_state_pi_list()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L184",
+      "id": "lib_install_state_install_state_pi_list",
+      "community": 1,
+      "norm_label": "install_state_pi_list()"
+    },
+    {
+      "label": "install_state_agent_os_resolved_path()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L188",
+      "id": "lib_install_state_install_state_agent_os_resolved_path",
+      "community": 1,
+      "norm_label": "install_state_agent_os_resolved_path()"
+    },
+    {
+      "label": "install_state_agent_os_actual_version()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L197",
+      "id": "lib_install_state_install_state_agent_os_actual_version",
+      "community": 1,
+      "norm_label": "install_state_agent_os_actual_version()"
+    },
+    {
+      "label": "install_state_agent_os_actual_source()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L212",
+      "id": "lib_install_state_install_state_agent_os_actual_source",
+      "community": 3,
+      "norm_label": "install_state_agent_os_actual_source()"
+    },
+    {
+      "label": "install_state_write_manifest()",
+      "file_type": "code",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L216",
+      "id": "lib_install_state_install_state_write_manifest",
+      "community": 2,
+      "norm_label": "install_state_write_manifest()"
+    },
+    {
+      "label": "graphify knowledge graph project rules",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_graphify",
+      "community": 7,
+      "norm_label": "graphify knowledge graph project rules"
+    },
+    {
+      "label": "GRAPH_REPORT.md primary map",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_graph_report",
+      "community": 7,
+      "norm_label": "graph_report.md primary map"
+    },
+    {
+      "label": "graphify-out wiki index",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_wiki_index",
+      "community": 7,
+      "norm_label": "graphify-out wiki index"
+    },
+    {
+      "label": "graphify query/path/explain commands",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_graphify_query",
+      "community": 7,
+      "norm_label": "graphify query/path/explain commands"
+    },
+    {
+      "label": "graphify update command",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_graphify_update",
+      "community": 7,
+      "norm_label": "graphify update command"
+    },
+    {
+      "label": "agent-os-starter project",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_agent_os_starter",
+      "community": 0,
+      "norm_label": "agent-os-starter project"
+    },
+    {
+      "label": "Pi coding agent",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_pi_coding_agent",
+      "community": 0,
+      "norm_label": "pi coding agent"
+    },
+    {
+      "label": "Agent OS Pi extension",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_agent_os_extension",
+      "community": 0,
+      "norm_label": "agent os pi extension"
+    },
+    {
+      "label": "brain CLI",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_brain_cli",
+      "community": 0,
+      "norm_label": "brain cli"
+    },
+    {
+      "label": "Local knowledge SQLite DB",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_knowledge_db",
+      "community": 0,
+      "norm_label": "local knowledge sqlite db"
+    },
+    {
+      "label": "knowledge.jsonl persisted memory",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_knowledge_jsonl",
+      "community": 0,
+      "norm_label": "knowledge.jsonl persisted memory"
+    },
+    {
+      "label": "setup.sh bootstrap",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_setup_sh",
+      "community": 0,
+      "norm_label": "setup.sh bootstrap"
+    },
+    {
+      "label": "doctor.sh health check",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_doctor_sh",
+      "community": 0,
+      "norm_label": "doctor.sh health check"
+    },
+    {
+      "label": "update.sh update script",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_update_sh",
+      "community": 0,
+      "norm_label": "update.sh update script"
+    },
+    {
+      "label": "uninstall.sh removal script",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_uninstall_sh",
+      "community": 0,
+      "norm_label": "uninstall.sh removal script"
+    },
+    {
+      "label": "smoke-user-install.sh",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_smoke_user_install",
+      "community": 17,
+      "norm_label": "smoke-user-install.sh"
+    },
+    {
+      "label": "agent-os-install.env config",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_install_env",
+      "community": 0,
+      "norm_label": "agent-os-install.env config"
+    },
+    {
+      "label": "/init command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_init_command",
+      "community": 0,
+      "norm_label": "/init command"
+    },
+    {
+      "label": "/doctor command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_doctor_command",
+      "community": 0,
+      "norm_label": "/doctor command"
+    },
+    {
+      "label": "/flow primary workflow",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_flow_command",
+      "community": 4,
+      "norm_label": "/flow primary workflow"
+    },
+    {
+      "label": "/grill phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_grill_command",
+      "community": 4,
+      "norm_label": "/grill phase"
+    },
+    {
+      "label": "/plan phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_plan_command",
+      "community": 4,
+      "norm_label": "/plan phase"
+    },
+    {
+      "label": "/run phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_run_command",
+      "community": 0,
+      "norm_label": "/run phase"
+    },
+    {
+      "label": "/verify phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_verify_command",
+      "community": 4,
+      "norm_label": "/verify phase"
+    },
+    {
+      "label": "/review phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_review_command",
+      "community": 4,
+      "norm_label": "/review phase"
+    },
+    {
+      "label": "/evaluate phase",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_evaluate_command",
+      "community": 4,
+      "norm_label": "/evaluate phase"
+    },
+    {
+      "label": "/continue resume command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_continue_command",
+      "community": 4,
+      "norm_label": "/continue resume command"
+    },
+    {
+      "label": "/flight session timeline",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_flight_command",
+      "community": 9,
+      "norm_label": "/flight session timeline"
+    },
+    {
+      "label": "/remember memory export",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_remember_command",
+      "community": 0,
+      "norm_label": "/remember memory export"
+    },
+    {
+      "label": "/memory recovery",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_memory_command",
+      "community": 0,
+      "norm_label": "/memory recovery"
+    },
+    {
+      "label": "/diagnose command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_diagnose_command",
+      "community": 9,
+      "norm_label": "/diagnose command"
+    },
+    {
+      "label": "/quick-task command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_quick_task_command",
+      "community": 9,
+      "norm_label": "/quick-task command"
+    },
+    {
+      "label": "/status command",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_status_command",
+      "community": 18,
+      "norm_label": "/status command"
+    },
+    {
+      "label": ".agent-os runtime sessions",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_runtime_sessions",
+      "community": 9,
+      "norm_label": ".agent-os runtime sessions"
+    },
+    {
+      "label": "Approval gates lifecycle",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_approval_gates",
+      "community": 4,
+      "norm_label": "approval gates lifecycle"
+    },
+    {
+      "label": "brain_playground examples repo",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_brain_playground",
+      "community": 0,
+      "norm_label": "brain_playground examples repo"
+    },
+    {
+      "label": "Local governed AI agent principle",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_local_governance",
+      "community": 0,
+      "norm_label": "local governed ai agent principle"
+    }
+  ],
+  "links": [
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "doctor.sh",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "doctor_sh",
+      "target": "agent_os_starter_doctor_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "doctor.sh",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "doctor_sh",
+      "target": "agent_os_starter_doctor_warn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "doctor.sh",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "doctor_sh",
+      "target": "agent_os_starter_doctor_fail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_pass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_warn",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_fail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_json_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_toml_project_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_remote_tag_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "release-check.sh",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "release_check_sh",
+      "target": "agent_os_starter_release_check_contains_stale_ref",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "setup.sh",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "setup_sh",
+      "target": "agent_os_starter_setup_brain_db_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "smoke-user-install.sh",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "smoke_user_install_sh",
+      "target": "agent_os_starter_smoke_user_install_run_step",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_json",
+      "target": "claude_settings_hooks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_hooks",
+      "target": "claude_settings_hooks_pretooluse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "claude_settings_local_json",
+      "target": "claude_settings_local_permissions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/settings.local.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_settings_local_permissions",
+      "target": "claude_settings_local_permissions_allow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_config_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_expected_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_channel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_knowledge_brain_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_knowledge_brain_expected_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_min_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_manifest_schema_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_pi_agent_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_brain_db_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_node_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_node",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_pi_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_uv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_brain_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_brain_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_brain_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_version_from_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_starter_commit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_manifest_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_agent_os_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_manifest_exists",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_manifest_json",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_manifest_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_manifest_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_brain_db",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_brain_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_check_agent_os_extension_registered",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L184",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_pi_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L188",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_resolved_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L197",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_actual_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_agent_os_actual_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "lib_install_state_sh",
+      "target": "lib_install_state_install_state_write_manifest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_brain_db_path",
+      "target": "lib_install_state_install_state_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L116",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_starter_commit",
+      "target": "lib_install_state_install_state_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L122",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_manifest_path",
+      "target": "lib_install_state_install_state_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L136",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_agent_os_dir",
+      "target": "lib_install_state_install_state_repo_root",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L181",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_agent_os_extension_registered",
+      "target": "lib_install_state_install_state_agent_os_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L190",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_resolved_path",
+      "target": "lib_install_state_install_state_agent_os_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L102",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_version_from_source",
+      "target": "lib_install_state_install_state_agent_os_expected_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L238",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_agent_os_expected_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L239",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_agent_os_channel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L220",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_knowledge_brain_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L243",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_knowledge_brain_expected_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L78",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_pi_version",
+      "target": "lib_install_state_install_state_min_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L167",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_manifest_schema",
+      "target": "lib_install_state_install_state_manifest_schema_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L232",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_manifest_schema_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L247",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_pi_agent_dir",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L171",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_brain_db",
+      "target": "lib_install_state_install_state_brain_db_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L176",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_brain_list",
+      "target": "lib_install_state_install_state_brain_db_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L246",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_brain_db_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L249",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_node_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L77",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_pi_version",
+      "target": "lib_install_state_install_state_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L226",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_pi_version",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L245",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_brain_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L228",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_agent_os_version_from_source",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L234",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_starter_commit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L129",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_manifest_field",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_manifest_exists",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L146",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_manifest_json",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L156",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_manifest_fields",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L225",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_manifest_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L166",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_check_manifest_schema",
+      "target": "lib_install_state_install_state_manifest_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L200",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_actual_version",
+      "target": "lib_install_state_install_state_manifest_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L213",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_actual_source",
+      "target": "lib_install_state_install_state_manifest_field",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L191",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_resolved_path",
+      "target": "lib_install_state_install_state_pi_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L205",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_agent_os_actual_version",
+      "target": "lib_install_state_install_state_agent_os_resolved_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "lib/install-state.sh",
+      "source_location": "L227",
+      "weight": 1.0,
+      "context": "call",
+      "source": "lib_install_state_install_state_write_manifest",
+      "target": "lib_install_state_install_state_agent_os_resolved_path",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "claude_graph_report"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "claude_wiki_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "claude_graphify_query"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "claude_graphify_update"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graphify",
+      "target": "readme_agent_os_starter"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_graph_report",
+      "target": "claude_wiki_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_os_starter",
+      "target": "readme_pi_coding_agent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_os_starter",
+      "target": "readme_agent_os_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_os_starter",
+      "target": "readme_knowledge_db"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_init_command",
+      "target": "readme_agent_os_starter"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_os_starter",
+      "target": "readme_local_governance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_agent_os_starter",
+      "target": "readme_brain_playground"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_setup_sh",
+      "target": "readme_pi_coding_agent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_run_command",
+      "target": "readme_pi_coding_agent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_setup_sh",
+      "target": "readme_agent_os_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_update_sh",
+      "target": "readme_agent_os_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_uninstall_sh",
+      "target": "readme_agent_os_extension"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_setup_sh",
+      "target": "readme_brain_cli"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_update_sh",
+      "target": "readme_brain_cli"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_brain_cli",
+      "target": "readme_knowledge_db"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_remember_command",
+      "target": "readme_knowledge_db"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_remember_command",
+      "target": "readme_knowledge_jsonl"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_setup_sh",
+      "target": "readme_install_env"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_doctor_sh",
+      "target": "readme_install_env"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_doctor_command",
+      "target": "readme_doctor_sh"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_grill_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_plan_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_run_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_verify_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_review_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_evaluate_command"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_continue_command"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flow_command",
+      "target": "readme_approval_gates"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_flight_command",
+      "target": "readme_runtime_sessions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_memory_command",
+      "target": "readme_remember_command"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_diagnose_command",
+      "target": "readme_runtime_sessions"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_quick_task_command",
+      "target": "readme_runtime_sessions"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "flow_lifecycle_phases",
+      "label": "Flow lifecycle phases",
+      "nodes": [
+        "readme_grill_command",
+        "readme_plan_command",
+        "readme_run_command",
+        "readme_verify_command",
+        "readme_review_command",
+        "readme_evaluate_command"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "install_lifecycle_scripts",
+      "label": "Install lifecycle scripts",
+      "nodes": [
+        "readme_setup_sh",
+        "readme_doctor_sh",
+        "readme_update_sh",
+        "readme_uninstall_sh"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    },
+    {
+      "id": "memory_persistence_flow",
+      "label": "Memory persistence flow",
+      "nodes": [
+        "readme_remember_command",
+        "readme_knowledge_db",
+        "readme_knowledge_jsonl",
+        "readme_memory_command"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "e609c6743b5346d2d8207c06d23f94215f90f9ab"
+}
