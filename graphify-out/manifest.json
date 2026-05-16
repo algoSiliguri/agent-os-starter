@@ -1,0 +1,57 @@
+{
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\doctor.sh": {
+    "mtime": 1778927806.985843,
+    "ast_hash": "ecdc55331765fa7c7e265c79b6ef0526",
+    "semantic_hash": "ecdc55331765fa7c7e265c79b6ef0526"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\release-check.sh": {
+    "mtime": 1778927807.0061865,
+    "ast_hash": "39c60e54ac2ee1fb5c7e0469b3e07cf2",
+    "semantic_hash": "39c60e54ac2ee1fb5c7e0469b3e07cf2"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\setup.sh": {
+    "mtime": 1778927807.018876,
+    "ast_hash": "51c5561ddfa8f4477faa3abf2500c5ec",
+    "semantic_hash": "51c5561ddfa8f4477faa3abf2500c5ec"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\smoke-user-install.sh": {
+    "mtime": 1778927807.0273848,
+    "ast_hash": "c814a0f2c633053058773e70a9aa06d7",
+    "semantic_hash": "c814a0f2c633053058773e70a9aa06d7"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\uninstall.sh": {
+    "mtime": 1778927807.0360844,
+    "ast_hash": "ee019f71769e306a2b0475b0e0be3c5c",
+    "semantic_hash": "ee019f71769e306a2b0475b0e0be3c5c"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\update.sh": {
+    "mtime": 1778927807.0447803,
+    "ast_hash": "f869c97de0d9844db5be721faf71d805",
+    "semantic_hash": "f869c97de0d9844db5be721faf71d805"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\.claude\\settings.json": {
+    "mtime": 1778912893.1617699,
+    "ast_hash": "e99d00f34528b94fcaaa41a2ab1c1654",
+    "semantic_hash": "e99d00f34528b94fcaaa41a2ab1c1654"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\.claude\\settings.local.json": {
+    "mtime": 1778928656.6465273,
+    "ast_hash": "8eea2b6a9047198c703cda801e50f42b",
+    "semantic_hash": "8eea2b6a9047198c703cda801e50f42b"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\lib\\install-state.sh": {
+    "mtime": 1778927806.9999516,
+    "ast_hash": "b703cfab485c9935bf078aaaa4ccccb1",
+    "semantic_hash": "b703cfab485c9935bf078aaaa4ccccb1"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\CLAUDE.md": {
+    "mtime": 1778912893.1555219,
+    "ast_hash": "747e73a5e1af4b72c0d65c9169c23199",
+    "semantic_hash": "747e73a5e1af4b72c0d65c9169c23199"
+  },
+  "C:\\Users\\agnivad\\OneDrive - Microsoft\\Agniva\\starter\\agent-os-starter\\README.md": {
+    "mtime": 1778927806.972602,
+    "ast_hash": "ec42dfc5e8e3ad568d11ed20b0593816",
+    "semantic_hash": "ec42dfc5e8e3ad568d11ed20b0593816"
+  }
+}
