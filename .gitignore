@@ -3,6 +3,7 @@ data_store/*.db*
 
 # Agent OS runtime — per-machine state
 .agent-os/project.yaml
+.agent-os/install-manifest.json
 .agent-os/runtime/
 .agent-os/tasks/
 .agent-os/schemas/

@@ -12,7 +12,7 @@ Local governed AI agent for your project. Runs in [Pi](https://pi.ai) via the Ag
 
 - Node.js 20+
 - Pi coding agent v0.74.0+: `npm install -g @earendil-works/pi-coding-agent`
-- `ANTHROPIC_API_KEY` set in your shell (or any other model API key — see Pi docs)
+- Provider auth configured: run `pi`, then `/login`, then choose your provider
 
 ---
 
@@ -29,20 +29,40 @@ cd my-project
 # 2. Bootstrap everything (installs brain CLI + Agent OS Pi extension)
 bash setup.sh
 
-# 3. Open Pi in your project
+# 3. Check the install without opening an interactive Pi session
+bash doctor.sh
+
+# 4. Open Pi in your project
 pi
 
-# 4. Initialize (run once per project — no arguments needed)
+# 5. Initialize (run once per project — no arguments needed)
 > /init
 
-# 5. Verify everything is working
+# 6. Verify everything is working inside Pi
 > /doctor
 
-# 6. Start your first task
+# 7. Start your first task
 > /flow "create a hello world file"
 ```
 
 `setup.sh` installs the `brain` CLI (via `uv`) and the Agent OS Pi extension. It requires `pi` to already be installed — it will fail with install instructions if not. Re-running it is safe — it skips already-installed components. `/init` with no arguments uses your folder name as the project ID. Re-running `/init` on an already-initialized project is safe.
+
+Install and update targets are defined in `agent-os-install.env`. The current release config installs Agent OS from the immutable `v1.6.1` tag.
+
+Lifecycle commands:
+
+```bash
+bash setup.sh --dry-run       # preview install
+bash doctor.sh                # non-interactive health check
+bash doctor.sh --release-check # verify release-source/version alignment
+bash update.sh --dry-run      # preview update
+bash update.sh                # update Agent OS + knowledge-brain
+bash uninstall.sh --dry-run   # preview uninstall
+bash uninstall.sh             # remove Agent OS from Pi, preserve project data
+bash smoke-user-install.sh --i-understand-this-mutates-user-install --dry-run
+```
+
+Developer-only smoke tests stay separate from the user install path. From the sibling `Agent_OS` repo, run `npm run dev:smoke` to test local source in an isolated `PI_CODING_AGENT_DIR`.
 
 ---
 
